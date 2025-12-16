@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lucky Seven Visual</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#e000ff;
+    --bg1:#0a0f1f;
+    --bg2:#090d19;
+    --card:rgba(255,255,255,.05);
+}
+
+body{
+    margin:0;
+    font-family:"Poppins",sans-serif;
+    background:linear-gradient(180deg,var(--bg1),var(--bg2));
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    padding:14px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    background:rgba(14,18,33,.65);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:10;
+}
+header nav a{
+    color:var(--primary);
+    margin-left:18px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:140px 20px 110px;
+    max-width:820px;
+    margin:auto;
+}
+.hero h1{
+    font-size:36px;
+    color:var(--primary);
+    line-height:1.35;
+}
+.hero p{
+    font-size:16px;
+    color:#d0d0d0;
+    margin:18px auto 30px;
+    line-height:1.75;
+    max-width:650px;
+}
+.hero .cta{
+    padding:14px 34px;
+    background:var(--primary);
+    color:#000;
+    border-radius:14px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 0 26px #d400ff80;
+}
+.hero .social{
+    margin-top:32px;
+    display:flex;
+    justify-content:center;
+    gap:16px;
+}
+.hero .social a{
+    padding:10px 18px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.15);
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    background:rgba(255,255,255,.04);
+}
+
+/* SECTION */
+.section-wrapper{
+    max-width:960px;
+    margin:120px auto;
+    padding:0 20px;
+}
+.section-wrapper h2{
+    text-align:center;
+    color:var(--primary);
+    font-size:28px;
+    margin-bottom:38px;
+}
+
+/* CARD */
+.section-box{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:18px;
+    padding:26px;
+    margin-bottom:22px;
+}
+.section-box h3{
+    color:var(--primary);
+    margin-bottom:12px;
+    font-size:20px;
+}
+.section-box p{
+    color:#d6d6d6;
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+}
+
+/* FINAL CTA */
+.final-cta{
+    text-align:center;
+    padding:100px 20px;
+}
+.final-cta h2{
+    font-size:30px;
+    color:var(--primary);
+}
+.final-cta p{
+    color:#d0d0d0;
+    max-width:620px;
+    margin:18px auto 34px;
+}
+.final-cta a{
+    padding:15px 36px;
+    background:var(--primary);
+    color:#000;
+    border-radius:16px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 0 28px #d400ff90;
+}
+
+/* FOOTER */
+footer{
+    padding:40px 20px 80px;
+    text-align:center;
+    font-size:14px;
+    color:#bdbdbd;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+footer a{
+    color:var(--primary);
+    text-decoration:none;
+}
+
+/* FLOATING WA */
+.wa-float{
+    position:fixed;
+    bottom:18px;
+    right:18px;
+    background:#25d366;
+    color:#000;
+    padding:14px 20px;
+    border-radius:40px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    z-index:20;
+}
+
+/* RESPONSIVE */
+@media(min-width:768px){
+    .services{grid-template-columns:repeat(2,1fr);}
+    .hero h1{font-size:42px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div style="color:#d400ff;font-weight:700;">Lucky Seven Visual</div>
+    <nav>
+        <a href="#layanan">Layanan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Lucky Seven Visual | Bangun Brand yang Terlihat Profesional & Dipercaya</h1>
+    <p>
+        Lucky Seven Visual membantu bisnis tampil lebih kuat melalui desain visual,
+        motion graphic, website sederhana, dan konten media sosial yang strategis.
+    </p>
+
+    <a href="https://wa.me/6282129990582" class="cta">Pesan Sekarang</a>
+</section>
+
+<!-- VALUE -->
+<section class="section-wrapper">
+    <h2>Kenapa Lucky Seven Visual?</h2>
+    <div class="section-box">
+        <p>
+            Kami tidak hanya membuat desain yang bagus,
+            tetapi membangun visual yang bekerja untuk brand dan penjualan Anda. Pendekatan kami rapi, konsisten, dan strategis agar brand terlihat profesional,
+            dipercaya, dan siap bersaing.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section-wrapper" id="layanan">
+    <h2>Layanan Kami</h2>
+    <div class="services">
+
+        <div class="section-box">
+            <h3>Social Media Design</h3>
+            <p>
+                Feed Instagram rapi, konsisten, dan menjual.<br><br>
+                ✔ Feed Instagram<br>
+                ✔ Carousel<br>
+                ✔ Visual Branding
+            </p>
+        </div>
+
+        <div class="section-box">
+            <h3>Motion Graphic</h3>
+            <p>
+                Konten bergerak yang menarik & mudah diingat.<br><br>
+                ✔ Video Promo<br>
+                ✔ Bumper Video<br>
+                ✔ Reels & Ads
+            </p>
+        </div>
+
+        <div class="section-box">
+            <h3>Website Sederhana</h3>
+            <p>
+                Website profesional untuk UMKM & personal brand.<br><br>
+                ✔ Landing Page<br>
+                ✔ Website Company Profile
+            </p>
+        </div>
+
+        <div class="section-box">
+            <h3>Flyer & Poster</h3>
+            <p>
+                Media promosi modern & tepat sasaran.<br><br>
+                ✔ Flyer Digital<br>
+                ✔ Poster Promosi<br>
+                ✔ Campaign Design
+            </p>
+        </div>
+
+       <div class="section-box">
+            <h3>Lainnya</h3>
+            <p>
+                Kami menyediakan semua kebutuhan visual.<br><br>
+            </p>
+        </div> 
+
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-wrapper">
+    <h2>Cara Kerja Kami</h2>
+    <div class="section-box"> Diskusi & Brief</div>
+    <div class="section-box"> Konsep & Desain</div>
+    <div class="section-box"> Revisi Terarah</div>
+    <div class="section-box"> File Siap Digunakan</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="kontak">
+    <h2>Siap Membuat Brand Anda Naik Level?</h2>
+    <p>
+        Jangan biarkan visual seadanya menurunkan nilai bisnis Anda.
+        Konsultasikan kebutuhan desain Anda sekarang.
+    </p>
+    <a href="https://wa.me/6282129990582">Hubungi Kami Sekarang</a>
+</section>
+
+<footer>
+    <strong>Lucky Seven Visual</strong><br>
+    Agensi Visual Digital<br>
+    Branding • Motion Graphic • Website • Konten Sosial<br><br>
+    📩 WhatsApp: 0821-2999-0582 |
+    <a href="https://instagram.com/luckyseven.visual" target="_blank">@luckyseven.visual</a>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/6282129990582" class="wa-float">💬 WhatsApp</a>
+
+</body>
+</html>
