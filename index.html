@@ -71,22 +71,6 @@ header nav a{
     text-decoration:none;
     box-shadow:0 0 26px #d400ff80;
 }
-.hero .social{
-    margin-top:32px;
-    display:flex;
-    justify-content:center;
-    gap:16px;
-}
-.hero .social a{
-    padding:10px 18px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.15);
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:600;
-    font-size:14px;
-    background:rgba(255,255,255,.04);
-}
 
 /* SECTION */
 .section-wrapper{
@@ -164,21 +148,6 @@ footer a{
     text-decoration:none;
 }
 
-/* FLOATING WA */
-.wa-float{
-    position:fixed;
-    bottom:18px;
-    right:18px;
-    background:#25d366;
-    color:#000;
-    padding:14px 20px;
-    border-radius:40px;
-    font-weight:700;
-    text-decoration:none;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-    z-index:20;
-}
-
 /* RESPONSIVE */
 @media(min-width:768px){
     .services{grid-template-columns:repeat(2,1fr);}
@@ -188,6 +157,11 @@ footer a{
 </head>
 
 <body>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="music/bg-music.mp3" type="audio/mpeg">
+</audio>
 
 <header>
     <div style="color:#d400ff;font-weight:700;">Lucky Seven Visual</div>
@@ -204,7 +178,6 @@ footer a{
         Lucky Seven Visual membantu bisnis tampil lebih kuat melalui desain visual,
         motion graphic, website sederhana, dan konten media sosial yang strategis.
     </p>
-
     <a href="https://wa.me/6282129990582" class="cta">Pesan Sekarang</a>
 </section>
 
@@ -300,6 +273,38 @@ footer a{
     📩 WhatsApp: 0821-2999-0582 |
     <a href="https://instagram.com/luckyseven.visual" target="_blank">@luckyseven.visual</a>
 </footer>
+
+<!-- MUSIC CONTROL -->
+<button onclick="toggleMusic()" style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.2);
+color:#fff;
+padding:10px 16px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+z-index:30;">
+🎵 Music
+</button>
+
+<script>
+const music = document.getElementById('bgMusic');
+let playing = false;
+
+function toggleMusic(){
+    if(!playing){
+        music.volume = 0.4;
+        music.play();
+        playing = true;
+    }else{
+        music.pause();
+        playing = false;
+    }
+}
+</script>
 
 </body>
 </html>
